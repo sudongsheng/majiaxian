@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/activity_badge"
+              android:background="@color/badge_bg">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="获得徽章"
+            android:id="@+id/textView" android:layout_gravity="center_horizontal"
+            android:textSize="30sp" android:textColor="#d74411" android:layout_marginTop="60dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/badge_img" android:layout_gravity="center_horizontal"
+            android:src="@drawable/badge_1"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="破冰者" android:textSize="24sp"
+            android:id="@+id/badge_name" android:layout_gravity="center_horizontal" android:textColor="#d74411"/>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:layout_marginTop="40dp">
+        <!-- 分享按钮 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:id="@+id/share_layout_btn">
+            <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="炫耀一下"
+                    android:id="@+id/share_btn" android:layout_gravity="center_horizontal"
+                    android:textSize="18sp" android:gravity="center"
+                    android:textColor="@color/white" android:background="#d74411"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="低调路过"
+                    android:id="@+id/no_share_btn" android:layout_gravity="center_horizontal" android:textSize="15sp"
+                    android:layout_marginTop="20dp" android:textColor="#1f3d4b"/>
+        </LinearLayout>
+
+        <!-- 分享界面 -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:visibility="gone" android:id="@+id/share_layout">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_gravity="center_horizontal"
+                        android:src="@drawable/share_weibo" android:background="@null"/>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:layout_weight="1" android:layout_gravity="center_horizontal"
+                             android:src="@drawable/share_qzone" android:background="@null"/>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:layout_weight="1" android:layout_gravity="center_horizontal"
+                             android:src="@drawable/share_weixin" android:background="@null"/>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:layout_weight="1" android:layout_gravity="center_horizontal"
+                             android:src="@drawable/share_pengyouquan" android:background="@null"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="取消" android:textColor="#1f3d4b" android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp" android:id="@+id/cancel_share"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

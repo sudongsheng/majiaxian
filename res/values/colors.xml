@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="base">#15576d</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="pink">#ffc0cb</color><!--粉红色 -->
+    <color name="white">#ffffff</color><!--白色 -->
+
+    <!--title bar-->
+    <color name="title">#1f3d4b</color>
+    <color name="title_bg">#ffffff</color>
+
+
+    <!-- itemOverview-->
+    <color name="itemOverview_group_bg">#0f3d4c</color>
+    <color name="itemOverview_rest_bg">#114657</color>
+
+    <!--itemPreview-->
+    <color name="itemPreView_bg">#b0000000</color>
+
+    <!--achievement-->
+    <color name="achievement_bg">#df4a31</color>
+
+    <!--badge-->
+    <color name="badge_bg">#ffffff</color>
+
+    <!--dialog-->
+    <color name="dialog_bg">#d74411</color>
+
+    <!--login-->
+    <color name="login_bg">#96000000</color>
+</resources>

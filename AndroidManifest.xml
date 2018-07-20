@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.pocdoc.majiaxian"
+          android:versionCode="6"
+          android:versionName="1.2.0">
+    <uses-sdk android:minSdkVersion="9"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+
+    <application android:name="cn.pocdoc.majiaxian.MainApplication"
+                 android:label="@string/app_name" android:icon="@drawable/icon">
+        <activity android:name=".activity.SplashActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ItemPreviewActivity"
+                  android:theme="@style/HalfTranslucent"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BadgeActivity"
+                  android:theme="@style/HalfTranslucent"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ItemOverviewActivity"
+                  android:launchMode="singleTask"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TrainActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TrainRestActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AchievementActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AchievementDetailActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.StatisticsActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FeedBackActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LoginActivity"
+                  android:theme="@style/HalfTranslucent"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WebBrowserActivity"
+                  android:theme="@style/HalfTranslucent"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"/>
+
+        <service
+                android:name=".service.RecordService"/>
+        <!--分享编辑页-->
+        <activity
+                android:name="com.umeng.socialize.view.ShareActivity"
+                android:configChanges="orientation|keyboard"
+                android:launchMode="singleTask"
+                android:noHistory="true"
+                android:theme="@style/Theme.UMDialog"
+                android:windowSoftInputMode="stateVisible|adjustResize">
+        </activity>
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+                android:name="com.tencent.tauth.AuthActivity"
+                android:launchMode="singleTask"
+                android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID-->
+                <data android:scheme="tencent1104111629"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.common.AssistActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:screenOrientation="portrait">
+        </activity>
+        <!-- 微信分享 -->
+        <activity
+                android:name=".wxapi.WXEntryActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:screenOrientation="portrait"/>
+        <!--友盟自动升级-->
+        <service
+                android:name="com.umeng.update.net.DownloadingService"
+                android:process=":DownloadingService">
+        </service>
+        <activity
+                android:name="com.umeng.update.UpdateDialogActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <!-- 友盟统计 -->
+        <meta-data android:name="UMENG_APPKEY" android:value="54b4a6bdfd98c51986000a5a"></meta-data>
+        <meta-data android:name="UMENG_CHANNEL" android:value="umeng"/>
+        <!--official 360  xiaomi qq baidu  wandoujia taobao -->
+        <!--anzhi jifeng  lenovo meizu  huawei umeng  -->
+    </application>
+</manifest>

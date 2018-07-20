@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" android:id="@+id/view_pause_dialog">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+               android:src="@drawable/dialog_bg" android:scaleType="matrix"
+               android:background="@color/transparent"/>
+    <LinearLayout
+            android:layout_width="256dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="128dp"
+                      android:orientation="vertical" android:background="@color/base"
+                      android:alpha="0.85">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="终止训练?"
+                      android:layout_marginTop="20dp"
+                      android:textSize="26sp"
+                      android:textColor="@color/white"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:layout_marginTop="16dp" android:textSize="16sp"
+                      android:text="胜利就在眼前了,别放弃"
+                      android:textColor="@color/white" android:gravity="center"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/dialog_continue" android:textSize="18sp" android:background="@color/achievement_bg"
+                  android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+                  android:textColor="@color/white" android:padding="10dp" android:layout_marginTop="1dp"
+                  android:text="坚持下去"/>
+        <TextView android:id="@+id/dialog_end" android:textSize="15sp"
+                  android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp" android:gravity="center" android:textColor="@color/black"
+                  android:text="终止" android:background="@color/transparent"/>
+    </LinearLayout>
+</FrameLayout>

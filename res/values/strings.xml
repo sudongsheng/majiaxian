@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">马甲线</string>
+
+    <string name="no_count_tip">静态</string>
+
+    <string name="prize_rule">新年快乐！各位勤奋刻苦为了健康努力的筒子们，集齐徽章兑换精美瑜伽垫活动已经圆满落幕，为了回馈新老用户，开发团队正在设计新的锻炼模式，运动方案，以及数据统计形式，更好地为您提供健康帮助！敬请期待。</string>
+    <string name="unlock">暂未解锁</string>
+    <string name="not_login">未登录</string>
+
+
+    <string name="down_tip">开始下载，请勿退出</string>
+    <string name="now_load">正在下载</string>
+    <string name="start_exercise">开始训练</string>
+    <string name="start_load">开始下载</string>
+    <string name="need_load">您需要先下载视频再开始锻炼哟~</string>
+    <string name="rest">休息</string>
+    <string name="login_prompt">登录之后同步数据才可使用更多功能</string>
+</resources>

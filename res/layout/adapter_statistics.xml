@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/adapter_statistics" xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:orientation="vertical" android:layout_alignParentLeft="true"
+                  android:gravity="center_horizontal" android:id="@+id/ll_left"
+                  android:layout_centerVertical="true" android:layout_marginLeft="30dp">
+        <TextView android:id="@+id/day_count" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="5" android:textColor="@color/white" android:textSize="36sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="累计天数" android:textColor="@color/white" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:orientation="vertical" android:layout_alignParentRight="true"
+                  android:gravity="center_horizontal" android:id="@+id/ll_right"
+                  android:layout_centerVertical="true" android:layout_marginRight="30dp">
+        <TextView android:id="@+id/time_count" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="5" android:textColor="@color/white" android:textSize="36sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="累计次数" android:textColor="@color/white" android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_centerInParent="true" android:text="塑造腹肌" android:textColor="@color/white"
+              android:textSize="24sp" android:layout_toLeftOf="@id/ll_right" android:layout_toRightOf="@id/ll_left"
+              android:maxLines="2" android:gravity="center"/>
+</RelativeLayout>
